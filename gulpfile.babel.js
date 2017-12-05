@@ -9,10 +9,15 @@ import sync from 'browser-sync';
 import webpack from 'webpack-stream';
 
 const PORT = 3000;
+const BROWSER_SYNC_PORT = 7000;
 
 const DIR = {
     SRC: 'src',
     BUILD: 'build'
+};
+
+const INDEX = {
+    JS: 'index.js'
 };
 
 const SRC = {
@@ -40,10 +45,10 @@ gulp.task('html', () =>
 );
 
 gulp.task('webpack', () => 
-    gulp.src(DIR.SRC + '/index.js')
+    gulp.src(DIR.SRC + '/' + INDEX.JS)
         .pipe(webpack({
             output: {
-                filename: 'index.js'
+                filename: INDEX.JS
             },
             devtool: 'source-map'
         }))
@@ -70,7 +75,7 @@ gulp.task('browser-sync', () => {
     sync.init(null, {
         proxy: "http://localhost:" + PORT,
         files: [ DIR.BUILD + "/**/*.*"],
-        port: 7000
+        port: BROWSER_SYNC_PORT
     })
 });
 
