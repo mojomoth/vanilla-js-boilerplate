@@ -1,0 +1,38 @@
+{
+  "name": "fe-homework-riot",
+  "version": "0.1.0",
+  "description": "Front-end engineer Homework",
+  "scripts": {
+    "build": "gulp build",
+    "start": "gulp serve",
+    "test": "node_modules/.bin/_mocha --compilers js:babel-core/register test/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mojomoth/mojomoth.git"
+  },
+  "author": "mojomoth",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.18.13",
+    "chai": "^4.1.2",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-open": "^2.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-util": "^3.0.8",
+    "gulp-webserver": "^0.9.1",
+    "mocha": "^4.0.1",
+    "node-pre-gyp": "^0.6.38",
+    "webpack-stream": "^4.0.0",
+    "xmlhttprequest": "^1.8.0"
+  }
+}
